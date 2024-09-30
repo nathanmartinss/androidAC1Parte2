@@ -12,7 +12,7 @@
         android:id="@+id/txtInicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lojas de Jogos Eletronicos Sorocaba"
+        android:text="Guia de lojas de jogos eletronicos Sorocaba"
         android:textAlignment="center"
         android:textSize="24sp" />
 
