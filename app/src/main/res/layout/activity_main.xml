@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#0AB3FD"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lojas de Jogos Eletronicos Sorocaba"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imgVotogames"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@mipmap/votogames" />
+
+    <TextView
+        android:id="@+id/txtSMVotogames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saiba mais:"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnVotoGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ED2424"
+        android:text="Votogames" />
+
+    <ImageView
+        android:id="@+id/imgXGames"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@mipmap/xgames" />
+
+    <TextView
+        android:id="@+id/txtSMXGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saiba mais:"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnXGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9C27B0"
+        android:text="X-Games" />
+
+    <ImageView
+        android:id="@+id/imgWorldGames"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@mipmap/worldgames" />
+
+    <TextView
+        android:id="@+id/txtSMWorldGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saiba mais:"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnWorldGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C77B0D"
+        android:text="World Games" />
+</LinearLayout>

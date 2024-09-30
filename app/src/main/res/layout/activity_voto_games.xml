@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Voltar"
+        android:layout_gravity="left"
+        android:backgroundTint="#F00606" />
+
+    <TextView
+        android:id="@+id/txtVotogamesPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votogames"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imgVoto"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/votogames" />
+
+    <TextView
+        android:id="@+id/txtVotoGamesDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Referência em tecnologia, periféricos e computadores gamers de alta performance, a Votogames se orgulha em oferecer uma experiência incomparável de qualidade e reconhecimento."
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnVotoGamesMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F00606"
+        android:text="Ver no Mapa" />
+
+    <Button
+        android:id="@+id/btnVotoGamesSite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F00606"
+        android:text="Abrir Site" />
+
+    <Button
+        android:id="@+id/btnVotoGamesCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F00606"
+        android:text="Ligar" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/votogames1" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/votogames2" />
+    </LinearLayout>
+</LinearLayout>
