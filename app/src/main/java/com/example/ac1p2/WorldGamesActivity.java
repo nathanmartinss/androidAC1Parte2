@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
+import android.content.pm.PackageManager;
+import android.Manifest;
 
 public class WorldGamesActivity extends AppCompatActivity {
 
@@ -47,11 +51,16 @@ public class WorldGamesActivity extends AppCompatActivity {
         btnWorldGamesCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                callIntent.setData(Uri.parse("tel:+551532341584"));
-                startActivity(callIntent);
+                Uri uri = Uri.parse("tel:+551532341584");
+                Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                int permissionCheck = ContextCompat.checkSelfPermission(WorldGamesActivity.this, Manifest.permission.CALL_PHONE);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(WorldGamesActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+                } else {
+                    startActivity(intent);
+                }
             }
         });
     }
-}
+    }
 

@@ -1,9 +1,14 @@
 package com.example.ac1p2;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import android.view.View;
 import android.widget.Button;
 
@@ -47,9 +52,14 @@ public class VotoGamesActivity extends AppCompatActivity {
         btnVotoGamesCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                callIntent.setData(Uri.parse("tel:+551532174622"));
-                startActivity(callIntent);
+                Uri uri = Uri.parse("tel:+551532174622");
+                Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                int permissionCheck = ContextCompat.checkSelfPermission(VotoGamesActivity.this, android.Manifest.permission.CALL_PHONE);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(VotoGamesActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+                } else {
+                    startActivity(intent);
+                }
             }
         });
     }
